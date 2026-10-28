@@ -1,0 +1,77 @@
+.num { font-variant-numeric: tabular-nums; }
+.page { max-width: 1040px; margin: 0 auto; padding: 14px; }
+.text-danger { color: var(--ion-color-danger); }
+.text-good { color: var(--ion-color-primary); }
+.muted { color: var(--ion-color-medium); }
+.right { text-align: right; }
+
+ion-toolbar { --border-color: #dbe3df; }
+ion-title { font-weight: 650; letter-spacing: -0.01em; }
+
+/* lists sit on one white sheet instead of floating cards */
+ion-list.sheet { background: #fff; border: 1px solid #dbe3df; border-radius: 6px; padding: 0; margin-bottom: 14px; }
+ion-list.sheet ion-item:last-child { --border-width: 0; }
+.row-main { display: flex; justify-content: space-between; gap: 12px; width: 100%; padding: 6px 0; align-items: center; }
+.row-main > div:last-child { text-align: right; flex-shrink: 0; }
+.row-title { font-weight: 600; }
+.row-sub { font-size: 0.82rem; color: var(--ion-color-medium); margin-top: 2px; }
+.row-amount { font-weight: 650; }
+
+/* dashboard / report figures */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.stat { background: #fff; border: 1px solid #dbe3df; border-left: 4px solid #c3cfc9; border-radius: 6px; padding: 12px 14px; }
+.stat.good { border-left-color: var(--ion-color-primary); }
+.stat.warn { border-left-color: var(--ion-color-warning); }
+.stat.bad { border-left-color: var(--ion-color-danger); }
+.stat-label { font-size: 0.82rem; color: #55675f; }
+.stat-value { font-size: 1.45rem; font-weight: 700; margin-top: 2px; letter-spacing: -0.02em; }
+
+h2.section { font-size: 1rem; font-weight: 650; margin: 18px 2px 8px; }
+.empty { text-align: center; color: var(--ion-color-medium); padding: 36px 12px; }
+
+/* forms */
+.field { margin-bottom: 14px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.modal-footer { display: flex; gap: 10px; padding: 8px 12px; }
+.modal-footer ion-button { flex: 1; margin: 0; }
+.chips { margin: -4px 0 12px; }
+
+/* item editor */
+.line { background: #fff; border: 1px solid #dbe3df; border-radius: 6px; padding: 8px 10px; margin-bottom: 10px; }
+.line-head { display: flex; justify-content: space-between; align-items: center; }
+.line-fields { display: grid; grid-template-columns: 1fr 1.4fr 1.2fr; gap: 8px; align-items: center; }
+.line-total { text-align: right; font-weight: 650; }
+
+.summary { background: #fff; border: 1px solid #dbe3df; border-radius: 6px; padding: 10px 14px; margin: 14px 0; }
+.summary div { display: flex; justify-content: space-between; padding: 3px 0; }
+.summary .grand { border-top: 1px solid #dbe3df; margin-top: 6px; padding-top: 8px; font-size: 1.2rem; font-weight: 700; }
+
+.credit-box { border: 1px solid #dbe3df; border-radius: 6px; padding: 10px 12px; margin-bottom: 14px; background: #fff; }
+.credit-box.bad { border-color: var(--ion-color-danger); background: #fbeeed; }
+
+/* report tables */
+.tbl-wrap { overflow-x: auto; background: #fff; border: 1px solid #dbe3df; border-radius: 6px; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.tbl th, .tbl td { padding: 9px 12px; text-align: left; border-bottom: 1px solid #e8eeeb; white-space: nowrap; }
+.tbl th { background: #eaf0ed; font-weight: 650; }
+.tbl td.n, .tbl th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.tbl tr:last-child td { border-bottom: 0; }
+
+/* menu */
+.brand { padding: 18px 16px 10px; font-weight: 750; font-size: 1.15rem; color: var(--ion-color-primary); letter-spacing: -0.02em; }
+.brand small { display: block; font-weight: 400; color: var(--ion-color-medium); font-size: 0.78rem; letter-spacing: 0; }
+ion-menu ion-item.active { --background: #e2efe9; --color: var(--ion-color-primary); font-weight: 650; }
+ion-menu ion-item { --border-width: 0; --background: transparent; }
+.alert-danger { color: var(--ion-color-danger) !important; }
+
+/* invoice (also what gets printed) */
+.invoice { background: #fff; padding: 4px; }
+.invoice h3 { margin: 0 0 2px; }
+.invoice .meta { display: flex; justify-content: space-between; margin: 12px 0; font-size: 0.9rem; }
+.invoice .tbl-wrap { border: 0; }
+@media print {
+  body * { visibility: hidden !important; }
+  .print-area, .print-area * { visibility: visible !important; }
+  .print-area { position: absolute; left: 0; top: 0; width: 100%; }
+}
+@media (max-width: 480px) { .line-fields { grid-template-columns: 1fr 1fr; } .line-total { grid-column: span 2; } }

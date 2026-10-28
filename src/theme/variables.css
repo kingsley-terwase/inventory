@@ -1,0 +1,31 @@
+/* Ledger-green palette: ink text on cool paper, one strong green, amber and red only for status. */
+:root {
+  --ion-font-family: 'Nunito', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --ion-background-color: #f2f5f3;
+  --ion-text-color: #14231e;
+  --ion-text-color-rgb: 20, 35, 30;
+
+  --ion-color-primary: #0b6b52;
+  --ion-color-primary-rgb: 11, 107, 82;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #0a5e48;
+  --ion-color-primary-tint: #247a62;
+
+  --ion-color-warning: #c27c0e;
+  --ion-color-warning-rgb: 194, 124, 14;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #aa6c0c;
+  --ion-color-warning-tint: #c8881f;
+
+  --ion-color-danger: #b3322a;
+  --ion-color-danger-rgb: 179, 50, 42;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #9e2c25;
+  --ion-color-danger-tint: #bb4740;
+
+  --ion-toolbar-background: #ffffff;
+  --ion-item-background: #ffffff;
+}
