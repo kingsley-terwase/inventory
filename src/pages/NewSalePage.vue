@@ -47,7 +47,7 @@ const dueDate = computed(() => addDays(today(), settings.s.repaymentDays))
 const cap = computed(() => discountCap(totals.value.subtotal + totals.value.surcharge, settings.s.maxDiscountType, settings.s.maxDiscountValue))
 const overCap = computed(() => settings.loaded && cap.value !== undefined && totals.value.discount > cap.value)
 
-watch(method, m => { if (m === 'credit' && !customer.value) toast('Choose or enter a customer to sell on credit', 'warning') })
+watch(method, m => { if (m === 'credit' && !customer.value) toast('Choose or enter a customer to sell on credit.', 'warning') })
 
 async function submit() {
   if (overCap.value) return toast(`The most discount allowed on this sale is ${money(cap.value!)}`, 'danger')

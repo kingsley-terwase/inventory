@@ -11,8 +11,9 @@ import { monthStart, today } from '@/utils/date'
 const acc = useAccounts(); const { money } = useSettings()
 const from = ref(monthStart()); const to = ref(today())
 
+// This is the account Page
 async function apply() {
-  if (from.value > to.value) return toast('The start date is after the end date', 'danger')
+  if (from.value > to.value) return toast('The start date is after the end date.', 'danger')
   try { await acc.loadSummary(from.value, to.value) } catch (e) { toast(errorText(e), 'danger') }
 }
 const tone = (key: string) => (key === 'money_received' ? 'good' : key === 'expenses' ? 'warn' : key === 'net_money_movement' ? (acc.get(key) >= 0 ? 'good' : 'bad') : undefined)
